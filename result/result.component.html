@@ -1,0 +1,13 @@
+<div *ngIf="Validate() == true">
+    <div class="title">
+        <p>Welcome!! To Sales Forecast Analysis <button class="logout" mat-button (click)="LogOut()">Logout</button></p>
+    </div>
+    <div class="title2">
+        <p>Mr/Ms. {{UserName}} <button class="chg-pwd" mat-button routerLink="/dashboard">Back</button></p>
+    </div>
+    <img class="graph" src={{imagename}} />
+    <div class="report">
+        <p style="padding-top: 10px;">REPORT</p>
+        <angular2csv class="button" [data]="csvdata" filename="result" [options]="options"></angular2csv>
+    </div>
+</div>
