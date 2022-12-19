@@ -1,0 +1,31 @@
+<div *ngIf="Validate() == true">
+    <div class="title">
+        <p>Welcome!! To Sales Forecast Analysis <button class="logout" mat-button (click)="LogOut()">Logout</button></p>
+    </div>
+    <div class="title2">
+        <button class="prev" mat-button *ngIf="Check_Img()==true" routerLink="/result">Previous Forecast</button>
+        <p>Mr/Ms. {{UserName}} </p><button class="chg-pwd" mat-button routerLink="/chgpwd">Profile</button>
+    </div>
+    <div class="file">
+        <mat-label>Forecast File Upload<br><br><br>
+        </mat-label>
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>{{uploadStatus}}</mat-label>
+            <input matInput type="text" [(ngModel)]="filename" disabled>
+            <input [hidden]="true" type="file" (change)="fileUpload($event)" accept=".csv" #fileSelect>
+            <mat-icon matSuffix mat-icon-button (click)="fileSelect.click();">file_upload</mat-icon>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="fill">
+            <mat-label>Forecast Period In Years</mat-label>
+            <mat-select [(value)]="noOfYears">
+                <mat-option value="0">0</mat-option>
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+            </mat-select>
+            </mat-form-field>    
+            <button class="button" mat-raised-button (click)="onSubmit()">UPLOAD</button>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+
