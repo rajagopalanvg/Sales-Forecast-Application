@@ -1,0 +1,61 @@
+.title{
+    border:none;
+    background-color: #4C489D;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    font-size: x-large;
+    padding-left: 500px;
+    border-bottom: #FF6700;
+}
+
+.title2{
+    background-color: #FF6700;
+    color: white;
+    align-items: center;
+    padding: 10px;
+    font-size: x-large;
+    padding-left: 550px;
+}
+
+.logout{
+    color: white;
+    background-color: #FF6700;
+    text-align: center;
+    position: absolute;
+    top:20px;
+    right: 0;
+}
+
+.chg-pwd{
+    color: white;
+    background-color: #4C489D;
+    text-align: center;
+    top:-30px;
+    right: -740px;
+}
+
+.file{
+    background-color: #4C489D;
+    position: absolute;
+    color:white;
+    font-size: large;
+    top:250px;
+    left: 450px;
+    text-align: center;
+    width:500px;
+    height: 200px;;
+}
+
+.button{
+    background-color: #FF6700;
+    color: white;
+    left:10px;
+}
+
+.prev{
+    background-color: #4C489D;
+    color: white;
+    top:30px;
+    right: 550px;
+}
